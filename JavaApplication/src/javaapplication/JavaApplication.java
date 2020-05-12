@@ -18,7 +18,7 @@ public class JavaApplication {
         //System.out.println("Normal: " + testNormal());
         List<Integer> rs = new ArrayList<>();
 
-        try {
+        try { 
             rs = testException();
             for(int i: rs){
                 System.out.println("i="+i);
