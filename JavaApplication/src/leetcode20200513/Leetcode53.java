@@ -74,4 +74,47 @@ public class Leetcode53 {
 	}
 	
 	
+	public int maxSubArray3(int[] nums) {
+		if(nums == null || nums.length ==0) {
+			return 0;
+		}
+		int maxSum = Integer.MIN_VALUE;
+		for(int i=0; i< nums.length; i++) {
+			
+			int tmpSum = nums[i];
+			if(tmpSum > maxSum) {
+				maxSum = tmpSum;
+			}
+			for(int j=i+1; j<nums.length; j++) {
+				tmpSum = nums[j]+ tmpSum;
+				
+				if(tmpSum > maxSum) {
+					maxSum = tmpSum;
+				}
+			}
+		}
+		return maxSum;
+	}
+	
+	public int maxSubArray4(int[] nums) {
+		if(nums == null || nums.length ==0) {
+			return 0;
+		}
+		int maxSum = Integer.MIN_VALUE;
+		int tmpSum =0 ;
+		for(int i=0; i< nums.length; i++) {
+			tmpSum = tmpSum + nums[i];
+			
+			if(tmpSum>maxSum) {
+				maxSum = tmpSum;
+			}
+			if(tmpSum < 0) {
+				tmpSum = 0;
+			}
+			
+		}
+		return maxSum;
+	}
+	
+	
 }
