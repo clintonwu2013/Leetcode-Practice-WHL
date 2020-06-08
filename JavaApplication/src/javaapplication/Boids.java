@@ -31,7 +31,7 @@ public class Boids extends JPanel {
     }
  
     private void spawnFlock() {
-        flock = Flock.spawn(-300, h * 0.5, 20);
+        flock = Flock.spawn(-300, h * 0.5, 3);
     }
  
     @Override
