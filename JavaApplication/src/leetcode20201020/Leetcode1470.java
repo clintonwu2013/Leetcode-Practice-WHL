@@ -14,7 +14,7 @@ public class Leetcode1470 {
 			suIndex++;
 			idx++;
 			
-		}
+		} 
 		
 		
 		return ans;
