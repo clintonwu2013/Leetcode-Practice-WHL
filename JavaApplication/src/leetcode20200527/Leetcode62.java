@@ -19,7 +19,7 @@ public class Leetcode62 {
 				s[i][j] = s[i-1][j]+s[i][j-1];
 			}
 		}
-		return s[m-1][n-1]; 
+		return s[m-1][n-1];  
 
 	}
 }
